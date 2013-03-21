@@ -1,0 +1,122 @@
+html{
+	height: 100%;
+}
+body {
+    position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+	height: 100%;
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+}
+
+.main_title {
+	text-decoration: none;
+	color: gray;
+	font-size: 20px;
+
+}
+
+p.wiki_content_odd {
+	background: ghostwhite;
+	padding: 20px;
+	margin: 0;
+}
+p.wiki_content_even {
+	background: white;
+	padding: 20px;
+	margin: 0px;
+}
+div#content {
+	margin-top: 50px;
+}
+
+
+.wiki_hist_controls {
+	position: absolute;
+	right: 10px;
+	margin-right: 5px;
+	color: gray;
+
+}
+
+.wiki_hist_controls a:link, .wiki_hist_controls a:visited {
+	color: #4682B4;
+	text-decoration: none;
+}
+div#user_auth a:link, div#user_auth a:visited {
+	text-decoration: none;
+	color: #4682B4;
+}
+div#user_auth a:hover, .wiki_hist_controls a:hover, a:hover{
+	text-decoration: underline;
+}
+
+div#user_auth {
+	position: absolute;
+	top: 5px;
+	right: 0px;
+	color: gray;
+
+}
+
+
+label {
+	display: block;
+	font-size: 16px;
+}
+label + label {
+	margin-top: 20px;
+}
+input[type=text] {
+	width: 200px;
+	height: 20px;
+	font-family: monospace;
+	font-size: 14px;
+	padding: 2px;
+}
+input[type=password] {
+	width: 200px;
+	height: 20px;
+	font-family: monospace;
+	font-size: 14px;
+	padding: 2px;
+}
+
+input[type=submit] {
+	font-size: 24px;
+}
+.error {
+	color: crimson;
+	font-size: 12px;
+	padding-left: 10px;
+}
+.main_edit {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	bottom: 30px;
+	left:0;
+
+}
+
+textarea{
+	position: absolute;
+	top: 0px;
+	right: 0;
+	bottom: 30px;
+	left:0;
+	font-size: 14px;
+	font-family: monospace;
+
+}
+
+.form_footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 30px;
+}

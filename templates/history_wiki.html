@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+{% if wiki_post %}
+{% for post in wiki_post %}
+<p class="{{ loop.cycle('wiki_content_odd', 'wiki_content_even') }}">{{post.created.strftime('%d %b %Y %H:%M:%S GMT')}}&nbsp;&nbsp;&nbsp;&nbsp;{{post.content | truncate(length = 80, killwords=True, end='...')}} <span class="wiki_hist_controls"><a href="{{url}}?id={{post.key().id()}}">view</a> | <a href="/_edit{{url}}?id={{post.key().id()}}">edit</a> </span></p>
+{% endfor %}
+{% else: %}
+
+{% endif %}
+
+{% endblock %}

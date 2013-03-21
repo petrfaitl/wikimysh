@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/main.css" />
+
+  <title>WikiMysh Wiki Site</title>
+
+</head>
+<body>
+	
+		<a href='/' class='main_title'>WikiMysh</a>
+
+<div id="user_auth">
+{% if username %}
+
+{% if 'edit' in path %}
+<a href="{{url}}">view</a>
+	{% else %}
+		<a href="/_edit{{url}}{{page_id}}">edit</a>
+ {% endif%}
+  | <a href="/_history{{url}}">history</a> &nbsp;&nbsp; &nbsp;{{username}} <a href="/logout">(logout)</a>
+{% else %}
+<a href="/_history{{url}}">history</a>&nbsp;&nbsp;&nbsp;<a href="/login">login</a> | <a href="/signup">signup</a>
+{% endif %}
+</div>
+<div id="content">{% block content %}{% endblock %}</div>
+
+</body>
+</html>

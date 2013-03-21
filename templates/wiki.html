@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+{% if wiki_post %}
+<div id="wiki-content">{{wiki_post.html_content() | safe}}</div>
+
+{% else: %}
+
+{% endif %}
+
+{% endblock %}
